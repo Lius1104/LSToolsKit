@@ -62,14 +62,4 @@
     return CGRectContainsPoint(bounds, point);
 }
 
-- (void)setLs_cornerRadius:(CGFloat)ls_cornerRadius {
-    _ls_cornerRadius = ls_cornerRadius;
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
-                                                        cornerRadius:ls_cornerRadius];
-    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    maskLayer.frame = self.bounds;
-    maskLayer.path = maskPath.CGPath;
-    self.layer.mask = maskLayer;
-}
-
 @end

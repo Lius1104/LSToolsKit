@@ -9,8 +9,12 @@
 #ifndef LSKit_h
 #define LSKit_h
 
+//#import <objc/runtime.h>
+
 #import "LSButton.h"
-#import "LSFont.h"
+#import "UIButton+LSAdd.h"
+#import "UIFont+LSAdd.h"
+#import "UIImage+LSAdd.h"
 
 
 #endif /* LSKit_h */

@@ -43,10 +43,5 @@ typedef NS_OPTIONS(NSUInteger, ExpandingDirectionType) {
  */
 @property (nonatomic, assign) ExpandingDirectionType expendDirection;
 
-/**
- 按钮的圆角半径
- */
-@property (nonatomic, assign) CGFloat ls_cornerRadius;
-
 
 @end
