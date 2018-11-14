@@ -14,7 +14,6 @@
 		5319CA24219AECE5004E9F3D /* LSToolsKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CA23219AECE5004E9F3D /* LSToolsKitDemoTests.m */; };
 		5319CA2F219AECE5004E9F3D /* LSToolsKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CA2E219AECE5004E9F3D /* LSToolsKitDemoUITests.m */; };
 		5319CA8B219B0057004E9F3D /* LSTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CA7E219B0057004E9F3D /* LSTableDataSource.m */; };
-		5319CA8C219B0057004E9F3D /* NSMutableArray+LSMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CA7F219B0057004E9F3D /* NSMutableArray+LSMove.m */; };
 		5319CA8D219B0057004E9F3D /* LSCollectionDataArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CA81219B0057004E9F3D /* LSCollectionDataArray.m */; };
 		5319CA8E219B0057004E9F3D /* LSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CA86219B0057004E9F3D /* LSButton.m */; };
 		5319CAA6219BA9F7004E9F3D /* FontAdaptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CA91219BA9F7004E9F3D /* FontAdaptViewController.m */; };
@@ -33,6 +32,13 @@
 		5319CABA219BB573004E9F3D /* UIButton+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAB9219BB573004E9F3D /* UIButton+LSAdd.m */; };
 		5319CABF219BCFC7004E9F3D /* UIImage+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CABD219BCFC7004E9F3D /* UIImage+LSAdd.m */; };
 		5319CAC2219BD1D8004E9F3D /* UIImage+HEIC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAC1219BD1D8004E9F3D /* UIImage+HEIC.m */; };
+		5319CAC6219BFD98004E9F3D /* UIView+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAC5219BFD98004E9F3D /* UIView+LSAdd.m */; };
+		5319CACB219C01B1004E9F3D /* LSImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CACA219C01B1004E9F3D /* LSImageView.m */; };
+		5319CACE219C0270004E9F3D /* UIView+LSAlertAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CACD219C0270004E9F3D /* UIView+LSAlertAnimation.m */; };
+		5319CAD7219C03BE004E9F3D /* NSIndexSet+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAD3219C03BE004E9F3D /* NSIndexSet+LSAdd.m */; };
+		5319CADA219C042A004E9F3D /* NSMutableArray+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAD9219C042A004E9F3D /* NSMutableArray+LSAdd.m */; };
+		5319CADD219C047F004E9F3D /* NSArray+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CADC219C047F004E9F3D /* NSArray+LSAdd.m */; };
+		5319CAE3219C079C004E9F3D /* LSSaveToAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAE2219C079C004E9F3D /* LSSaveToAlbum.m */; };
 		602788980FBA249B67D2C9C0 /* libPods-LSToolsKitDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0461FCC65277FA6508AF026 /* libPods-LSToolsKitDemoTests.a */; };
 		679D2E5CD0FB87DE71A30F82 /* libPods-LSToolsKitDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F145FF3EB3E4CD7E85CE51E /* libPods-LSToolsKitDemoUITests.a */; };
 		FD79623845E9BC6178615FC1 /* libPods-LSToolsKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9435FE74135D5079C366951C /* libPods-LSToolsKitDemo.a */; };
@@ -70,10 +76,8 @@
 		5319CA2A219AECE5004E9F3D /* LSToolsKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSToolsKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5319CA2E219AECE5004E9F3D /* LSToolsKitDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSToolsKitDemoUITests.m; sourceTree = "<group>"; };
 		5319CA30219AECE5004E9F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5319CA7C219B0057004E9F3D /* NSMutableArray+LSMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+LSMove.h"; sourceTree = "<group>"; };
 		5319CA7D219B0057004E9F3D /* LSCollectionDataArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCollectionDataArray.h; sourceTree = "<group>"; };
 		5319CA7E219B0057004E9F3D /* LSTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTableDataSource.m; sourceTree = "<group>"; };
-		5319CA7F219B0057004E9F3D /* NSMutableArray+LSMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+LSMove.m"; sourceTree = "<group>"; };
 		5319CA80219B0057004E9F3D /* LSTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTableDataSource.h; sourceTree = "<group>"; };
 		5319CA81219B0057004E9F3D /* LSCollectionDataArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCollectionDataArray.m; sourceTree = "<group>"; };
 		5319CA82219B0057004E9F3D /* LSKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSKit.h; sourceTree = "<group>"; };
@@ -109,6 +113,21 @@
 		5319CABE219BCFC7004E9F3D /* UIImage+LSAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LSAdd.h"; sourceTree = "<group>"; };
 		5319CAC0219BD1D7004E9F3D /* UIImage+HEIC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HEIC.h"; sourceTree = "<group>"; };
 		5319CAC1219BD1D8004E9F3D /* UIImage+HEIC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HEIC.m"; sourceTree = "<group>"; };
+		5319CAC4219BFD98004E9F3D /* UIView+LSAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LSAdd.h"; sourceTree = "<group>"; };
+		5319CAC5219BFD98004E9F3D /* UIView+LSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LSAdd.m"; sourceTree = "<group>"; };
+		5319CAC7219C0175004E9F3D /* UIKitEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitEnums.h; sourceTree = "<group>"; };
+		5319CAC9219C01B1004E9F3D /* LSImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSImageView.h; sourceTree = "<group>"; };
+		5319CACA219C01B1004E9F3D /* LSImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSImageView.m; sourceTree = "<group>"; };
+		5319CACC219C0270004E9F3D /* UIView+LSAlertAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LSAlertAnimation.h"; sourceTree = "<group>"; };
+		5319CACD219C0270004E9F3D /* UIView+LSAlertAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LSAlertAnimation.m"; sourceTree = "<group>"; };
+		5319CAD3219C03BE004E9F3D /* NSIndexSet+LSAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+LSAdd.m"; sourceTree = "<group>"; };
+		5319CAD4219C03BE004E9F3D /* NSIndexSet+LSAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+LSAdd.h"; sourceTree = "<group>"; };
+		5319CAD8219C042A004E9F3D /* NSMutableArray+LSAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+LSAdd.h"; sourceTree = "<group>"; };
+		5319CAD9219C042A004E9F3D /* NSMutableArray+LSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+LSAdd.m"; sourceTree = "<group>"; };
+		5319CADB219C047F004E9F3D /* NSArray+LSAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+LSAdd.h"; sourceTree = "<group>"; };
+		5319CADC219C047F004E9F3D /* NSArray+LSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LSAdd.m"; sourceTree = "<group>"; };
+		5319CAE1219C079C004E9F3D /* LSSaveToAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSaveToAlbum.h; sourceTree = "<group>"; };
+		5319CAE2219C079C004E9F3D /* LSSaveToAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSaveToAlbum.m; sourceTree = "<group>"; };
 		53D67FBC93C6D5AFACDA1BE5 /* Pods-LSToolsKitDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoTests/Pods-LSToolsKitDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A7391328AC4B9B7D9557727 /* Pods-LSToolsKitDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoUITests/Pods-LSToolsKitDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC25118A258D06D78937720 /* Pods-LSToolsKitDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoUITests/Pods-LSToolsKitDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,12 +237,10 @@
 		5319CA7B219B0057004E9F3D /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				5319CA7C219B0057004E9F3D /* NSMutableArray+LSMove.h */,
 				5319CA7D219B0057004E9F3D /* LSCollectionDataArray.h */,
-				5319CA7E219B0057004E9F3D /* LSTableDataSource.m */,
-				5319CA7F219B0057004E9F3D /* NSMutableArray+LSMove.m */,
-				5319CA80219B0057004E9F3D /* LSTableDataSource.h */,
 				5319CA81219B0057004E9F3D /* LSCollectionDataArray.m */,
+				5319CA80219B0057004E9F3D /* LSTableDataSource.h */,
+				5319CA7E219B0057004E9F3D /* LSTableDataSource.m */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -231,9 +248,12 @@
 		5319CA83219B0057004E9F3D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				5319CAC8219C018E004E9F3D /* ImageView */,
+				5319CAC3219BFD59004E9F3D /* View */,
 				5319CABC219BCFB3004E9F3D /* Image */,
 				5319CA84219B0057004E9F3D /* Button */,
 				5319CA87219B0057004E9F3D /* Font */,
+				5319CAC7219C0175004E9F3D /* UIKitEnums.h */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -261,6 +281,14 @@
 		5319CA8A219B0057004E9F3D /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				5319CAE1219C079C004E9F3D /* LSSaveToAlbum.h */,
+				5319CAE2219C079C004E9F3D /* LSSaveToAlbum.m */,
+				5319CAD4219C03BE004E9F3D /* NSIndexSet+LSAdd.h */,
+				5319CAD3219C03BE004E9F3D /* NSIndexSet+LSAdd.m */,
+				5319CAD8219C042A004E9F3D /* NSMutableArray+LSAdd.h */,
+				5319CAD9219C042A004E9F3D /* NSMutableArray+LSAdd.m */,
+				5319CADB219C047F004E9F3D /* NSArray+LSAdd.h */,
+				5319CADC219C047F004E9F3D /* NSArray+LSAdd.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -304,6 +332,26 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		5319CAC3219BFD59004E9F3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5319CACC219C0270004E9F3D /* UIView+LSAlertAnimation.h */,
+				5319CACD219C0270004E9F3D /* UIView+LSAlertAnimation.m */,
+				5319CAC4219BFD98004E9F3D /* UIView+LSAdd.h */,
+				5319CAC5219BFD98004E9F3D /* UIView+LSAdd.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5319CAC8219C018E004E9F3D /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				5319CAC9219C01B1004E9F3D /* LSImageView.h */,
+				5319CACA219C01B1004E9F3D /* LSImageView.m */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
 		6944BA716BA5991E641AA58B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,7 +362,6 @@
 				5A7391328AC4B9B7D9557727 /* Pods-LSToolsKitDemoUITests.debug.xcconfig */,
 				5CC25118A258D06D78937720 /* Pods-LSToolsKitDemoUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -532,16 +579,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5319CAAE219BA9F7004E9F3D /* MainTableViewController.m in Sources */,
-				5319CA8C219B0057004E9F3D /* NSMutableArray+LSMove.m in Sources */,
 				5319CAC2219BD1D8004E9F3D /* UIImage+HEIC.m in Sources */,
+				5319CAE3219C079C004E9F3D /* LSSaveToAlbum.m in Sources */,
+				5319CACB219C01B1004E9F3D /* LSImageView.m in Sources */,
 				5319CAA8219BA9F7004E9F3D /* LSSBTableViewCell.m in Sources */,
 				5319CAAB219BA9F7004E9F3D /* LSCollectionVC.m in Sources */,
 				5319CABA219BB573004E9F3D /* UIButton+LSAdd.m in Sources */,
 				5319CAA9219BA9F7004E9F3D /* LSColorCell.m in Sources */,
 				5319CA8E219B0057004E9F3D /* LSButton.m in Sources */,
 				5319CA8B219B0057004E9F3D /* LSTableDataSource.m in Sources */,
+				5319CACE219C0270004E9F3D /* UIView+LSAlertAnimation.m in Sources */,
 				5319CAAA219BA9F7004E9F3D /* ViewController.m in Sources */,
+				5319CAD7219C03BE004E9F3D /* NSIndexSet+LSAdd.m in Sources */,
+				5319CADA219C042A004E9F3D /* NSMutableArray+LSAdd.m in Sources */,
 				5319CAAD219BA9F7004E9F3D /* LSNibTableViewCell.m in Sources */,
+				5319CAC6219BFD98004E9F3D /* UIView+LSAdd.m in Sources */,
 				5319CABF219BCFC7004E9F3D /* UIImage+LSAdd.m in Sources */,
 				5319CAB0219BA9F7004E9F3D /* ExpendClickButtonVC.m in Sources */,
 				5319CA1A219AECE5004E9F3D /* main.m in Sources */,
@@ -551,6 +603,7 @@
 				5319CAB7219BAFDF004E9F3D /* UIFont+LSAdd.m in Sources */,
 				5319CAAF219BA9F7004E9F3D /* LSCollectionViewCell.m in Sources */,
 				5319CA0C219AECE4004E9F3D /* AppDelegate.m in Sources */,
+				5319CADD219C047F004E9F3D /* NSArray+LSAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

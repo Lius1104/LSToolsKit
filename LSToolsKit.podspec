@@ -141,4 +141,15 @@ Pod::Spec.new do |spec|
     ss.dependency 'SDWebImage'
   end
 
+  spec.subspec 'Foundation' do |ss|
+  	ss.public_header_files = "LSToolsKit/Foundation/*.h"
+    ss.source_files = "LSToolsKit/Foundation/*.{h,m}"
+  end
+
+  spec.subspec 'DataSource' do |ss|
+  	ss.public_header_files = "LSToolsKit/DataSource/*.h"
+    ss.source_files = "LSToolsKit/DataSource/*.{h,m}"
+    ss.dependency 'LSToolsKit/Foundation'
+  end
+
 end

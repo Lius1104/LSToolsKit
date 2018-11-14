@@ -1,14 +1,14 @@
 //
-//  NSMutableArray+LSMove.m
-//  LighterController
+//  NSMutableArray+LSAdd.m
+//  LSToolsKitDemo
 //
-//  Created by ejiang on 2017/2/23.
-//  Copyright © 2017年 Lius. All rights reserved.
+//  Created by 刘爽 on 2018/11/14.
+//  Copyright © 2018 刘爽. All rights reserved.
 //
 
-#import "NSMutableArray+LSMove.h"
+#import "NSMutableArray+LSAdd.h"
 
-@implementation NSMutableArray (LSMove)
+@implementation NSMutableArray (LSAdd)
 
 - (void)moveObjectFromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
     if (toIndex != fromIndex && fromIndex < [self count] && toIndex <= [self count]) {

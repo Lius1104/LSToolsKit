@@ -7,7 +7,7 @@
 //
 
 #import "LSTableDataSource.h"
-#import "NSMutableArray+LSMove.h"
+#import "NSMutableArray+LSAdd.h"
 
 
 @implementation LSTableDataSource {
