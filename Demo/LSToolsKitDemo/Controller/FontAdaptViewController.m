@@ -7,7 +7,7 @@
 //
 
 #import "FontAdaptViewController.h"
-#import "LSKit.h"
+#import "LSToolsKit.h"
 
 @interface FontAdaptViewController ()
 

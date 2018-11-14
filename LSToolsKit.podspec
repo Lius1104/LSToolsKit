@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LSToolsKit"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "LSToolsKit. 开发过程中的小方法"
 
   # This description is used to generate tags and improve search results.
@@ -91,10 +91,10 @@ Pod::Spec.new do |spec|
   #
 
   # spec.source_files = "LSToolsKit", "LSToolsKit/**/*.{h,m}"
-  spec.source_files = "LSToolsKit/LSKit.h"
+  spec.source_files = "LSToolsKit/LSToolsKit.h"
   # spec.exclude_files = "LSToolsKit/Exclude"
 
-  spec.public_header_files = "LSToolsKit/LSKit.h"
+  spec.public_header_files = "LSToolsKit/LSToolsKit.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -117,8 +117,8 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  spec.framework  = "UIKit"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
+  # spec.framework  = "UIKit"
+  spec.frameworks = 'UIKit', 'Foundation', 'Photos'
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"

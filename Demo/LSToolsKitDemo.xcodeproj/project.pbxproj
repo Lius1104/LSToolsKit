@@ -80,7 +80,6 @@
 		5319CA7E219B0057004E9F3D /* LSTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTableDataSource.m; sourceTree = "<group>"; };
 		5319CA80219B0057004E9F3D /* LSTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTableDataSource.h; sourceTree = "<group>"; };
 		5319CA81219B0057004E9F3D /* LSCollectionDataArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCollectionDataArray.m; sourceTree = "<group>"; };
-		5319CA82219B0057004E9F3D /* LSKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSKit.h; sourceTree = "<group>"; };
 		5319CA85219B0057004E9F3D /* LSButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSButton.h; sourceTree = "<group>"; };
 		5319CA86219B0057004E9F3D /* LSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSButton.m; sourceTree = "<group>"; };
 		5319CA91219BA9F7004E9F3D /* FontAdaptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontAdaptViewController.m; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		5319CADC219C047F004E9F3D /* NSArray+LSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LSAdd.m"; sourceTree = "<group>"; };
 		5319CAE1219C079C004E9F3D /* LSSaveToAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSaveToAlbum.h; sourceTree = "<group>"; };
 		5319CAE2219C079C004E9F3D /* LSSaveToAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSaveToAlbum.m; sourceTree = "<group>"; };
+		5319CAF0219C13B2004E9F3D /* LSToolsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSToolsKit.h; sourceTree = "<group>"; };
 		53D67FBC93C6D5AFACDA1BE5 /* Pods-LSToolsKitDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoTests/Pods-LSToolsKitDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A7391328AC4B9B7D9557727 /* Pods-LSToolsKitDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoUITests/Pods-LSToolsKitDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC25118A258D06D78937720 /* Pods-LSToolsKitDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoUITests/Pods-LSToolsKitDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 		5319CA7A219B0057004E9F3D /* LSToolsKit */ = {
 			isa = PBXGroup;
 			children = (
-				5319CA82219B0057004E9F3D /* LSKit.h */,
+				5319CAF0219C13B2004E9F3D /* LSToolsKit.h */,
 				5319CA7B219B0057004E9F3D /* DataSource */,
 				5319CA8A219B0057004E9F3D /* Foundation */,
 				5319CA83219B0057004E9F3D /* UIKit */,

@@ -9,7 +9,7 @@
 #import "ExpendClickButtonVC.h"
 #import "LSButton.h"
 #import "UIButton+LSAdd.h"
-#import "LSKit.h"
+#import "LSToolsKit.h"
 
 @interface ExpendClickButtonVC ()
 
