@@ -91,18 +91,18 @@
 //    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
 //    subView.backgroundColor = [UIColor redColor];
 //    [btn addSubview:subView];
-    btn.ls_timeInterVal = 2.f;
+//    btn.ls_timeInterVal = 2.f;
     NSLog(@"%f", btn.ls_cornerRadius);
     
-    UIView * bottomView = [[UIView alloc] initWithFrame:btn.frame];
-    bottomView.backgroundColor = [UIColor redColor];
-    bottomView.ls_cornerRadius = 30;
-    [self.view addSubview:bottomView];
-    
-    UIImageView * imgView = [[UIImageView alloc] initWithFrame:btn.frame];
-    imgView.backgroundColor = [UIColor whiteColor];
-    imgView.ls_cornerRadius = 50;
-    [self.view addSubview:imgView];
+//    UIView * bottomView = [[UIView alloc] initWithFrame:btn.frame];
+//    bottomView.backgroundColor = [UIColor redColor];
+//    bottomView.ls_cornerRadius = 30;
+//    [self.view addSubview:bottomView];
+//    
+//    UIImageView * imgView = [[UIImageView alloc] initWithFrame:btn.frame];
+//    imgView.backgroundColor = [UIColor whiteColor];
+//    imgView.ls_cornerRadius = 50;
+//    [self.view addSubview:imgView];
 }
 
 - (void)handleTouchUpInside {

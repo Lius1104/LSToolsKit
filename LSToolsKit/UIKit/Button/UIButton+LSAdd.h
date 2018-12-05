@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  设置点击时间间隔, 防止暴力点击
  */
-@property (nonatomic, assign) NSTimeInterval ls_timeInterVal;//default is 0.f.
+@property (nonatomic, assign) NSTimeInterval ls_timeInterVal;//default is 2.f.
 
 @end
 

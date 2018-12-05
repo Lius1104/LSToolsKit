@@ -24,7 +24,7 @@ static void *kLSIsExcuteEvent = &kLSIsExcuteEvent;
 
 @implementation UIButton (LSAdd)
 
-//static const CGFloat defaultInterval = 0.f;
+static const CGFloat defaultInterval = 2.f;
 
 #pragma mark - 设置圆角
 @dynamic ls_cornerRadius;
@@ -65,8 +65,10 @@ static void *kLSIsExcuteEvent = &kLSIsExcuteEvent;
 }
 
 - (void)newSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
-    if (self.isExcuteEvent)
-        return;
+    if (self.isExcuteEvent == NO) {
+        self.ls_timeInterVal = (self.ls_timeInterVal == 0 ? defaultInterval : self.ls_timeInterVal);
+    }
+    if (self.isExcuteEvent) return;
     if (self.ls_timeInterVal > 0) {
         self.isExcuteEvent = YES;
         [self performSelector:@selector(setIsExcuteEvent:) withObject:@(NO) afterDelay:self.ls_timeInterVal];
