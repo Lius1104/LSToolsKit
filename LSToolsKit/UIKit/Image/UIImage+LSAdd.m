@@ -13,13 +13,17 @@ NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat
     if (image == nil) {
         return nil;
     }
-    NSData * imageData = UIImageJPEGRepresentation(image, compressionQuality);
+    
+    NSData * imageData = tj_UIImageHEICRepresentation(image, compressionQuality);
     if (imageData == nil) {
-        UIGraphicsBeginImageContext(image.size);
-        [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
-        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        imageData = UIImageJPEGRepresentation(newImage, compressionQuality);
+        imageData = UIImageJPEGRepresentation(image, compressionQuality);
+        if (imageData == nil) {
+            UIGraphicsBeginImageContext(image.size);
+            [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+            UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            imageData = UIImageJPEGRepresentation(newImage, compressionQuality);
+        }
     }
     return imageData;
 }
@@ -144,11 +148,10 @@ NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat
 
 - (NSData *)imageCompressToLimitBitSize:(CGFloat)limitBitSize {
     CGFloat compression = 0.9;
-    NSData *imageData;
-    imageData = tj_UIImageHEICRepresentation(self, compression);
-    if (imageData == nil || imageData.length == 0) {
-        imageData = LSImageJPEGRepresentation(self, compression);
-    }
+    NSData *imageData = LSImageJPEGRepresentation(self, compression);
+//    if (imageData == nil || imageData.length == 0) {
+//        imageData = LSImageJPEGRepresentation(self, compression);
+//    }
     NSLog(@"%f", (double)[imageData length]);
     if (@available(iOS 10.0, *)) {
         CIImage *ciImage = [CIImage imageWithData:imageData];

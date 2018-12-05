@@ -103,6 +103,19 @@
 //    imgView.backgroundColor = [UIColor whiteColor];
 //    imgView.ls_cornerRadius = 50;
 //    [self.view addSubview:imgView];
+    
+//    UIView * view = [[UIScreen mainScreen] snapshotViewAfterScreenUpdates:YES];
+    UIImage * image = [UIImage imageNamed:@"more_weekly"];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        UIGraphicsBeginImageContext(image.size);
+        [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIImageView * img = [[UIImageView alloc] initWithImage:newImage];
+            [self.view addSubview:img];
+        });
+    });
 }
 
 - (void)handleTouchUpInside {
