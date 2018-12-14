@@ -77,15 +77,15 @@ static const CGFloat defaultInterval = 0.7f;
     
     
     if ([NSStringFromClass(self.class) isEqualToString:@"UIButton"]) {
-        self.ls_timeInterVal = self.ls_timeInterVal == 0 ? defaultInterval : self.ls_timeInterVal;
-        if (self.isExcuteEvent) {
-            return;
-        } else if (self.ls_timeInterVal > 0) {
-            [self performSelector:@selector(setIsExcuteEvent:) withObject:@(NO) afterDelay:self.ls_timeInterVal];
+        if (self.isExcuteEvent == 0) {
+            self.ls_timeInterVal = self.ls_timeInterVal == 0 ? defaultInterval : self.ls_timeInterVal;
+        }
+        if (self.isExcuteEvent) return;
+        if (self.ls_timeInterVal > 0) {
+            self.isExcuteEvent = YES;
+            [self performSelector:@selector(setIsExcuteEvent:) withObject:nil afterDelay:self.ls_timeInterVal];
         }
     }
-    //此处 methodA和methodB方法IMP互换了，实际上执行 sendAction；所以不会死循环
-    self.isExcuteEvent = YES;
     [self newSendAction:action to:target forEvent:event];
 }
 
