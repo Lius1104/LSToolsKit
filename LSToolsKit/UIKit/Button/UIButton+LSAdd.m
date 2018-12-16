@@ -24,7 +24,7 @@ static void *kLSCornerRadius = &kLSCornerRadius;
 
 @implementation UIButton (LSAdd)
 
-static const CGFloat defaultInterval = 0.7f;
+//static const CGFloat defaultInterval = 0.7f;
 
 #pragma mark - 设置圆角
 @dynamic ls_cornerRadius;
