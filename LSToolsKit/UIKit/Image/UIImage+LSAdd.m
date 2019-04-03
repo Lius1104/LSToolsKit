@@ -8,7 +8,6 @@
 
 #import "UIImage+LSAdd.h"
 #import "UIImage+HEIC.h"
-#import "LSImageCache.h"
 
 NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat compressionQuality) {
     if (image == nil) {
