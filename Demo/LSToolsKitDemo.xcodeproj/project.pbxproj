@@ -40,6 +40,7 @@
 		5319CADD219C047F004E9F3D /* NSArray+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CADC219C047F004E9F3D /* NSArray+LSAdd.m */; };
 		5319CAE3219C079C004E9F3D /* LSSaveToAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAE2219C079C004E9F3D /* LSSaveToAlbum.m */; };
 		53C7B4AB225463600042FF8E /* LSTitleTransformToImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C7B4AA225463600042FF8E /* LSTitleTransformToImageVC.m */; };
+		53C7B4AE22547B210042FF8E /* LSImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C7B4AD22547B210042FF8E /* LSImageCache.m */; };
 		602788980FBA249B67D2C9C0 /* libPods-LSToolsKitDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0461FCC65277FA6508AF026 /* libPods-LSToolsKitDemoTests.a */; };
 		679D2E5CD0FB87DE71A30F82 /* libPods-LSToolsKitDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F145FF3EB3E4CD7E85CE51E /* libPods-LSToolsKitDemoUITests.a */; };
 		FD79623845E9BC6178615FC1 /* libPods-LSToolsKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9435FE74135D5079C366951C /* libPods-LSToolsKitDemo.a */; };
@@ -131,6 +132,8 @@
 		5319CAF0219C13B2004E9F3D /* LSToolsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSToolsKit.h; sourceTree = "<group>"; };
 		53C7B4A9225463600042FF8E /* LSTitleTransformToImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSTitleTransformToImageVC.h; sourceTree = "<group>"; };
 		53C7B4AA225463600042FF8E /* LSTitleTransformToImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSTitleTransformToImageVC.m; sourceTree = "<group>"; };
+		53C7B4AC22547B210042FF8E /* LSImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSImageCache.h; sourceTree = "<group>"; };
+		53C7B4AD22547B210042FF8E /* LSImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSImageCache.m; sourceTree = "<group>"; };
 		53D67FBC93C6D5AFACDA1BE5 /* Pods-LSToolsKitDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoTests/Pods-LSToolsKitDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A7391328AC4B9B7D9557727 /* Pods-LSToolsKitDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoUITests/Pods-LSToolsKitDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC25118A258D06D78937720 /* Pods-LSToolsKitDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoUITests/Pods-LSToolsKitDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -333,6 +336,8 @@
 				5319CAC1219BD1D8004E9F3D /* UIImage+HEIC.m */,
 				5319CABE219BCFC7004E9F3D /* UIImage+LSAdd.h */,
 				5319CABD219BCFC7004E9F3D /* UIImage+LSAdd.m */,
+				53C7B4AC22547B210042FF8E /* LSImageCache.h */,
+				53C7B4AD22547B210042FF8E /* LSImageCache.m */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -590,6 +595,7 @@
 				5319CAA8219BA9F7004E9F3D /* LSSBTableViewCell.m in Sources */,
 				5319CAAB219BA9F7004E9F3D /* LSCollectionVC.m in Sources */,
 				5319CABA219BB573004E9F3D /* UIButton+LSAdd.m in Sources */,
+				53C7B4AE22547B210042FF8E /* LSImageCache.m in Sources */,
 				5319CAA9219BA9F7004E9F3D /* LSColorCell.m in Sources */,
 				5319CA8E219B0057004E9F3D /* LSButton.m in Sources */,
 				5319CA8B219B0057004E9F3D /* LSTableDataSource.m in Sources */,

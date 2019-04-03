@@ -8,6 +8,7 @@
 
 #import "UIImage+LSAdd.h"
 #import "UIImage+HEIC.h"
+#import "LSImageCache.h"
 
 NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat compressionQuality) {
     if (image == nil) {
@@ -306,8 +307,7 @@ NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat
     UIImageView * imageView = [[UIImageView alloc] init];
     NSURL * url = [NSURL URLWithString:imageUrl];
     [imageView sd_setImageWithURL:url placeholderImage:nil];
-    SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    UIImage * image = [[manager imageCache] imageFromDiskCacheForKey:url.absoluteString];
+    UIImage * image = imageView.image;
     if (image == nil) {
         NSData *data = [NSData dataWithContentsOfURL:url];
         image = [UIImage imageWithData:data];
