@@ -241,7 +241,12 @@ NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     [bgColor set];
     UIRectFill(CGRectMake(0, 0, size.width, size.height));
-    [string drawInRect:CGRectMake(0, 0, size.width, size.height) withAttributes:attributes];
+    CGSize titleSize = [string boundingRectWithSize:CGSizeZero options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
+    titleSize.width = ceil(titleSize.width);
+    titleSize.height = ceil(titleSize.height);
+    CGFloat x = (size.width - titleSize.width) / 2.f;
+    CGFloat y = (size.height - titleSize.height) / 2.f;
+    [string drawInRect:CGRectMake(x, y, titleSize.width, titleSize.height) withAttributes:attributes];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
