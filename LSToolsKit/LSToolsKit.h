@@ -21,7 +21,7 @@
 #import "UIButton+LSAdd.h"
 #import "UIFont+LSAdd.h"
 #import "LSImageView.h"
-#import "UIImage+HEIC.h"
+//#import "UIImage+HEIC.h"
 #import "UIImage+LSAdd.h"
 #import "UIView+LSAdd.h"
 #import "UIView+LSAlertAnimation.h"
