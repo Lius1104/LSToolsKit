@@ -7,24 +7,20 @@
 //
 
 #import "UIImage+LSAdd.h"
-#import "UIImage+HEIC.h"
 
 NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat compressionQuality) {
     if (image == nil) {
         return nil;
     }
-    
-    NSData * imageData = tj_UIImageHEICRepresentation(image, compressionQuality);
+    NSData * imageData = UIImageJPEGRepresentation(image, compressionQuality);
     if (imageData == nil) {
-        imageData = UIImageJPEGRepresentation(image, compressionQuality);
-        if (imageData == nil) {
-            UIGraphicsBeginImageContext(image.size);
-            [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
-            UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-            UIGraphicsEndImageContext();
-            imageData = UIImageJPEGRepresentation(newImage, compressionQuality);
-        }
+        UIGraphicsBeginImageContext(image.size);
+        [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        imageData = UIImageJPEGRepresentation(newImage, compressionQuality);
     }
+    
     return imageData;
 }
 

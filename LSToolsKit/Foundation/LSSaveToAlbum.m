@@ -36,6 +36,7 @@
     self.albumName = customName;
 }
 
+#pragma mark - create new
 - (void)saveImage:(UIImage *)image successBlock:(SuccessBlock)block {
     __block NSString * Identify = nil;
     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
@@ -93,6 +94,15 @@
         [self saveToCustomAlbum:Identify];
     }];
 }
+
+//#pragma mark - edit
+//- (void)editAsset:(PHAsset *)asset image:(UIImage *)image successBlock:(SuccessBlock)block {
+//    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+//        asset requestContentEditingInputWithOptions:<#(nullable PHContentEditingInputRequestOptions *)#> completionHandler:<#^(PHContentEditingInput * _Nullable contentEditingInput, NSDictionary * _Nonnull info)completionHandler#>
+//    } completionHandler:^(BOOL success, NSError * _Nullable error) {
+//        //
+//    }];
+//}
 
 #pragma mark - private
 - (PHAssetCollection *)customAlbum {

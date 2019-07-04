@@ -26,4 +26,6 @@
 #import "UIView+LSAdd.h"
 #import "UIView+LSAlertAnimation.h"
 
+#import "UIViewController+LSAuthorization.h"
+
 #endif /* LSToolsKit_h */

@@ -31,7 +31,6 @@
 		5319CAB7219BAFDF004E9F3D /* UIFont+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAB6219BAFDF004E9F3D /* UIFont+LSAdd.m */; };
 		5319CABA219BB573004E9F3D /* UIButton+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAB9219BB573004E9F3D /* UIButton+LSAdd.m */; };
 		5319CABF219BCFC7004E9F3D /* UIImage+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CABD219BCFC7004E9F3D /* UIImage+LSAdd.m */; };
-		5319CAC2219BD1D8004E9F3D /* UIImage+HEIC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAC1219BD1D8004E9F3D /* UIImage+HEIC.m */; };
 		5319CAC6219BFD98004E9F3D /* UIView+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAC5219BFD98004E9F3D /* UIView+LSAdd.m */; };
 		5319CACB219C01B1004E9F3D /* LSImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CACA219C01B1004E9F3D /* LSImageView.m */; };
 		5319CACE219C0270004E9F3D /* UIView+LSAlertAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CACD219C0270004E9F3D /* UIView+LSAlertAnimation.m */; };
@@ -41,6 +40,9 @@
 		5319CAE3219C079C004E9F3D /* LSSaveToAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5319CAE2219C079C004E9F3D /* LSSaveToAlbum.m */; };
 		53B8754A22AE07F200F30903 /* UIImageView+LSAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B8754922AE07F200F30903 /* UIImageView+LSAdd.m */; };
 		53C7B4AB225463600042FF8E /* LSTitleTransformToImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C7B4AA225463600042FF8E /* LSTitleTransformToImageVC.m */; };
+		53E278FB22B8814400B65C7E /* UIViewController+LSAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E278F822B8814300B65C7E /* UIViewController+LSAuthorization.m */; };
+		53E278FC22B8814400B65C7E /* NSObject+LSAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E278F922B8814300B65C7E /* NSObject+LSAuthorization.m */; };
+		53E278FE22B88A5700B65C7E /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E278FD22B88A5700B65C7E /* Photos.framework */; };
 		602788980FBA249B67D2C9C0 /* libPods-LSToolsKitDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0461FCC65277FA6508AF026 /* libPods-LSToolsKitDemoTests.a */; };
 		679D2E5CD0FB87DE71A30F82 /* libPods-LSToolsKitDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F145FF3EB3E4CD7E85CE51E /* libPods-LSToolsKitDemoUITests.a */; };
 		FD79623845E9BC6178615FC1 /* libPods-LSToolsKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9435FE74135D5079C366951C /* libPods-LSToolsKitDemo.a */; };
@@ -112,8 +114,6 @@
 		5319CAB9219BB573004E9F3D /* UIButton+LSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LSAdd.m"; sourceTree = "<group>"; };
 		5319CABD219BCFC7004E9F3D /* UIImage+LSAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LSAdd.m"; sourceTree = "<group>"; };
 		5319CABE219BCFC7004E9F3D /* UIImage+LSAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LSAdd.h"; sourceTree = "<group>"; };
-		5319CAC0219BD1D7004E9F3D /* UIImage+HEIC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HEIC.h"; sourceTree = "<group>"; };
-		5319CAC1219BD1D8004E9F3D /* UIImage+HEIC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HEIC.m"; sourceTree = "<group>"; };
 		5319CAC4219BFD98004E9F3D /* UIView+LSAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LSAdd.h"; sourceTree = "<group>"; };
 		5319CAC5219BFD98004E9F3D /* UIView+LSAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LSAdd.m"; sourceTree = "<group>"; };
 		5319CAC7219C0175004E9F3D /* UIKitEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitEnums.h; sourceTree = "<group>"; };
@@ -135,6 +135,11 @@
 		53C7B4A9225463600042FF8E /* LSTitleTransformToImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSTitleTransformToImageVC.h; sourceTree = "<group>"; };
 		53C7B4AA225463600042FF8E /* LSTitleTransformToImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSTitleTransformToImageVC.m; sourceTree = "<group>"; };
 		53D67FBC93C6D5AFACDA1BE5 /* Pods-LSToolsKitDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoTests/Pods-LSToolsKitDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		53E278F722B8814300B65C7E /* NSObject+LSAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LSAuthorization.h"; sourceTree = "<group>"; };
+		53E278F822B8814300B65C7E /* UIViewController+LSAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LSAuthorization.m"; sourceTree = "<group>"; };
+		53E278F922B8814300B65C7E /* NSObject+LSAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LSAuthorization.m"; sourceTree = "<group>"; };
+		53E278FA22B8814300B65C7E /* UIViewController+LSAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LSAuthorization.h"; sourceTree = "<group>"; };
+		53E278FD22B88A5700B65C7E /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		5A7391328AC4B9B7D9557727 /* Pods-LSToolsKitDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoUITests/Pods-LSToolsKitDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC25118A258D06D78937720 /* Pods-LSToolsKitDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemoUITests/Pods-LSToolsKitDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D8A6165E8ADC2F23CAD8297 /* Pods-LSToolsKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSToolsKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-LSToolsKitDemo/Pods-LSToolsKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E278FE22B88A5700B65C7E /* Photos.framework in Frameworks */,
 				FD79623845E9BC6178615FC1 /* libPods-LSToolsKitDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +293,7 @@
 		5319CA8A219B0057004E9F3D /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				53E278F622B8814300B65C7E /* Authorization */,
 				5319CAE1219C079C004E9F3D /* LSSaveToAlbum.h */,
 				5319CAE2219C079C004E9F3D /* LSSaveToAlbum.m */,
 				5319CAD4219C03BE004E9F3D /* NSIndexSet+LSAdd.h */,
@@ -332,8 +339,6 @@
 		5319CABC219BCFB3004E9F3D /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				5319CAC0219BD1D7004E9F3D /* UIImage+HEIC.h */,
-				5319CAC1219BD1D8004E9F3D /* UIImage+HEIC.m */,
 				5319CABE219BCFC7004E9F3D /* UIImage+LSAdd.h */,
 				5319CABD219BCFC7004E9F3D /* UIImage+LSAdd.m */,
 				53B8754822AE07F200F30903 /* UIImageView+LSAdd.h */,
@@ -362,6 +367,17 @@
 			path = ImageView;
 			sourceTree = "<group>";
 		};
+		53E278F622B8814300B65C7E /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				53E278F722B8814300B65C7E /* NSObject+LSAuthorization.h */,
+				53E278F922B8814300B65C7E /* NSObject+LSAuthorization.m */,
+				53E278FA22B8814300B65C7E /* UIViewController+LSAuthorization.h */,
+				53E278F822B8814300B65C7E /* UIViewController+LSAuthorization.m */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
 		6944BA716BA5991E641AA58B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +394,7 @@
 		69496416CD2FDA6608B011E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53E278FD22B88A5700B65C7E /* Photos.framework */,
 				9435FE74135D5079C366951C /* libPods-LSToolsKitDemo.a */,
 				D0461FCC65277FA6508AF026 /* libPods-LSToolsKitDemoTests.a */,
 				8F145FF3EB3E4CD7E85CE51E /* libPods-LSToolsKitDemoUITests.a */,
@@ -589,8 +606,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5319CAAE219BA9F7004E9F3D /* MainTableViewController.m in Sources */,
+				53E278FB22B8814400B65C7E /* UIViewController+LSAuthorization.m in Sources */,
 				53B8754A22AE07F200F30903 /* UIImageView+LSAdd.m in Sources */,
-				5319CAC2219BD1D8004E9F3D /* UIImage+HEIC.m in Sources */,
 				5319CAE3219C079C004E9F3D /* LSSaveToAlbum.m in Sources */,
 				5319CACB219C01B1004E9F3D /* LSImageView.m in Sources */,
 				5319CAA8219BA9F7004E9F3D /* LSSBTableViewCell.m in Sources */,
@@ -599,6 +616,7 @@
 				5319CAA9219BA9F7004E9F3D /* LSColorCell.m in Sources */,
 				5319CA8E219B0057004E9F3D /* LSButton.m in Sources */,
 				5319CA8B219B0057004E9F3D /* LSTableDataSource.m in Sources */,
+				53E278FC22B8814400B65C7E /* NSObject+LSAuthorization.m in Sources */,
 				5319CACE219C0270004E9F3D /* UIView+LSAlertAnimation.m in Sources */,
 				5319CAAA219BA9F7004E9F3D /* ViewController.m in Sources */,
 				5319CAD7219C03BE004E9F3D /* NSIndexSet+LSAdd.m in Sources */,
