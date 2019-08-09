@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LSToolsKit"
-  spec.version      = "1.0.8.1"
+  spec.version      = "1.0.8.2"
   spec.summary      = "LSToolsKit. 开发过程中的小方法"
 
   # This description is used to generate tags and improve search results.
