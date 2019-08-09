@@ -189,7 +189,11 @@ NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat
     NSLog(@"%f", (double)[imageData length]);
     while ([imageData length] > limitBitSize/* && compression > maxCompression*/) {
         compression *= 0.9;
-        imageData = LSImageJPEGRepresentation(self, compression);
+        NSData * data = LSImageJPEGRepresentation(self, compression);
+        if ([data length] == [imageData length]) {
+            imageData = data;
+            break;
+        }
         NSLog(@"%f", (double)[imageData length]);
     }
     return imageData;
