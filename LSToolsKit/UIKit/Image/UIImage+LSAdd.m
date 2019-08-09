@@ -193,6 +193,8 @@ NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat
         if ([data length] == [imageData length]) {
             imageData = data;
             break;
+        } else {
+            imageData = data;
         }
         NSLog(@"%f", (double)[imageData length]);
     }
