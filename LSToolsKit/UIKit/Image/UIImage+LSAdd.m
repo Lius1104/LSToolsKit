@@ -111,24 +111,26 @@ NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat
         height = ceil(original.height / scale);
     }
     CGSize newSize = CGSizeMake(width, height);
-    UIGraphicsBeginImageContext(newSize);
     CGRect rect = CGRectMake(0, 0, newSize.width, newSize.height);
-    [image drawInRect:rect];
-    UIImage *newing = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-
-    return newing;
-    
-//    UIImage *resultImage;
-//    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0.0); // 0.0 for scale means "correct scale for device's main screen".
-//    CGImageRef sourceImg = CGImageCreateWithImageInRect([image CGImage], CGRectMake(0, 0, original.width, original.height)); // cropping happens here.
-//    image = [UIImage imageWithCGImage:sourceImg scale:0.0 orientation:image.imageOrientation]; // create cropped UIImage.
-//    [image drawInRect:rect]; // the actual scaling happens here, and orientation is taken care of automatically.
-//    CGImageRelease(sourceImg);
-//    resultImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsBeginImageContext(newSize);
+//    [image drawInRect:rect];
+//    UIImage *newing = UIGraphicsGetImageFromCurrentImageContext();
 //    UIGraphicsEndImageContext();
 //
-//    return resultImage;
+//    return newing;
+    
+    UIImage *resultImage;
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale); // 0.0 for scale means "correct scale for device's main screen".
+//    CGImageRef sourceImg = CGImageCreateWithImageInRect([image CGImage], CGRectMake(0, 0, original.width, original.height)); // cropping happens here.
+    CGImageRef sourceImg = CGImageCreateWithImageInRect([image CGImage], rect);
+//    image = [UIImage imageWithCGImage:sourceImg scale:0.0 orientation:image.imageOrientation]; // create cropped UIImage.
+    image = [UIImage imageWithCGImage:sourceImg];
+    [image drawInRect:rect]; // the actual scaling happens here, and orientation is taken care of automatically.
+    CGImageRelease(sourceImg);
+    resultImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return resultImage;
 }
 
 - (UIImage *)imageByScalingToSize:(CGSize)targetSize {
