@@ -120,9 +120,9 @@ NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat
 //    return newing;
     
     UIImage *resultImage;
-    UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale); // 0.0 for scale means "correct scale for device's main screen".
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0); // 0.0 for scale means "correct scale for device's main screen".
 //    CGImageRef sourceImg = CGImageCreateWithImageInRect([image CGImage], CGRectMake(0, 0, original.width, original.height)); // cropping happens here.
-    CGImageRef sourceImg = CGImageCreateWithImageInRect([image CGImage], rect);
+    CGImageRef sourceImg = CGImageCreateWithImageInRect([image CGImage], CGRectMake(0, 0, image.size.width, image.size.height));
 //    image = [UIImage imageWithCGImage:sourceImg scale:0.0 orientation:image.imageOrientation]; // create cropped UIImage.
     image = [UIImage imageWithCGImage:sourceImg];
     [image drawInRect:rect]; // the actual scaling happens here, and orientation is taken care of automatically.
