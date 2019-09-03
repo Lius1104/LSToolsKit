@@ -38,12 +38,20 @@ NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat
 
 - (UIImage *)fixOrientation {
     if (self.imageOrientation == UIImageOrientationUp) return self;
-
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
-    [self drawInRect:(CGRect){0, 0, self.size}];
-    UIImage *normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return normalizedImage;
+    UIImage *normalizedImage;
+    @try {
+        UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
+        [self drawInRect:(CGRect){0, 0, self.size}];
+        normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    } @catch (NSException *exception) {
+        return self;
+    }
+//    UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
+//    [self drawInRect:(CGRect){0, 0, self.size}];
+//    UIImage *normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+    return normalizedImage == nil ? self : normalizedImage;
     
 //    UIImage *image;
 //    UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale); // 0.0 for scale means "correct scale for device's main screen".
@@ -177,27 +185,50 @@ NSData * __nullable LSImageJPEGRepresentation(UIImage * __nonnull image, CGFloat
 }
 
 - (NSData *)imageCompressToLimitBitSize:(CGFloat)limitBitSize {
-    CGFloat compression = 0.9;
-    NSData *imageData = LSImageJPEGRepresentation(self, compression);
-    NSLog(@"%f", (double)[imageData length]);
+//    CGFloat compression = 0.9;
+//    NSData *imageData = LSImageJPEGRepresentation(self, compression);
+//    NSLog(@"%f", (double)[imageData length]);
+//    if (@available(iOS 10.0, *)) {
+//        CIImage *ciImage = [CIImage imageWithData:imageData];
+//        CIContext *context = [CIContext context];
+//        imageData = [context JPEGRepresentationOfImage:ciImage colorSpace:ciImage.colorSpace options:@{}];
+//    }
+    
+//    NSLog(@"%f", (double)[imageData length]);
+//    while ([imageData length] > limitBitSize/* && compression > maxCompression*/) {
+//        compression *= 0.9;
+//        NSData * data = LSImageJPEGRepresentation(self, compression);
+//        if ([data length] == [imageData length]) {
+//            imageData = data;
+//            break;
+//        } else {
+//            imageData = data;
+//        }
+//        NSLog(@"%f", (double)[imageData length]);
+//    }
+//    return imageData;
+    
+    CGFloat compression = 1;
+    NSData * imageData = UIImageJPEGRepresentation(self, compression);
     if (@available(iOS 10.0, *)) {
         CIImage *ciImage = [CIImage imageWithData:imageData];
         CIContext *context = [CIContext context];
         imageData = [context JPEGRepresentationOfImage:ciImage colorSpace:ciImage.colorSpace options:@{}];
     }
-    
-    
-    NSLog(@"%f", (double)[imageData length]);
-    while ([imageData length] > limitBitSize/* && compression > maxCompression*/) {
-        compression *= 0.9;
-        NSData * data = LSImageJPEGRepresentation(self, compression);
-        if ([data length] == [imageData length]) {
-            imageData = data;
-            break;
+    UIImage * newImage = [UIImage imageWithData:imageData];
+    if (imageData.length < limitBitSize) return imageData;
+    CGFloat max = 1;
+    CGFloat min = 0;
+    for (int i = 0; i < 6; ++i) {
+        compression = (max + min) / 2;
+        imageData = UIImageJPEGRepresentation(newImage, compression);
+        if (imageData.length < limitBitSize * 0.9) {
+            min = compression;
+        } else if (imageData.length > limitBitSize) {
+            max = compression;
         } else {
-            imageData = data;
+            break;
         }
-        NSLog(@"%f", (double)[imageData length]);
     }
     return imageData;
 }
