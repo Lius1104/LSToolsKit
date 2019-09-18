@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LSSaveToAlbum.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[LSSaveToAlbum mainSave] configCustomAlbumName:@"自定义相册"];
     return YES;
 }
 

@@ -25,7 +25,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xq6-EL-Npi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2601" y="1155"/>
+            <point key="canvasLocation" x="3623" y="1590"/>
         </scene>
         <!--LSKitDemo-->
         <scene sceneID="hrq-I3-aAf">
@@ -138,6 +138,26 @@
                                             <segue destination="hLJ-dD-yQZ" kind="show" id="duC-Km-YOo"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="e6y-ae-971" rowHeight="50" style="IBUITableViewCellStyleDefault" id="bw2-jR-7dp">
+                                        <rect key="frame" x="0.0" y="285" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bw2-jR-7dp" id="DRT-AL-uNy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="保存到本地相册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e6y-ae-971">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="49.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="uzI-6M-BV5" kind="show" id="n6W-lM-aos"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -151,6 +171,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tak-Lq-xrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1908" y="776.76161919040487"/>
+        </scene>
+        <!--Save To Album ExampleVC-->
+        <scene sceneID="23d-9T-yy4">
+            <objects>
+                <viewController storyboardIdentifier="SaveToAlbumExampleVC" id="uzI-6M-BV5" customClass="SaveToAlbumExampleVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QyS-iT-xJz"/>
+                        <viewControllerLayoutGuide type="bottom" id="m9X-yw-N7j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sfp-sS-TcE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5n-8s-TtY">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.3921568627" green="0.72156862749999995" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="L5n-8s-TtY" secondAttribute="height" id="5Y5-FN-xHf"/>
+                                    <constraint firstAttribute="height" constant="100" id="9HA-Xd-Eyh"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="handleClickSaveButton:" destination="uzI-6M-BV5" eventType="touchUpInside" id="tHN-J4-mkf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L5n-8s-TtY" firstAttribute="centerY" secondItem="sfp-sS-TcE" secondAttribute="centerY" id="eWL-tV-pRR"/>
+                            <constraint firstItem="L5n-8s-TtY" firstAttribute="centerX" secondItem="sfp-sS-TcE" secondAttribute="centerX" id="lAk-aS-O90"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMa-iS-BVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2878" y="777"/>
         </scene>
         <!--轻量级控制器之collectionView-->
         <scene sceneID="qnD-14-ScW">
