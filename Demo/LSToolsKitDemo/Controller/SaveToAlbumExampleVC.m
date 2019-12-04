@@ -29,14 +29,15 @@
     UIColor * color = randomColor;
     sender.backgroundColor = color;
     UIImage * image = [self imageWithColor:color size:CGSizeMake(900, 900)];
-    [[LSSaveToAlbum mainSave] saveImage:image successBlock:^(NSString *assetLocalId) {
-        NSLog(@"%@", assetLocalId);
-    } failureBlock:^(NSError *error) {
-        NSLog(@"%@", error);
-        if (error.domain == NSCocoaErrorDomain && error.code == 2047) {
-            
-        }
-    }];
+//    [[LSSaveToAlbum mainSave] saveImage:image successBlock:^(NSString *assetLocalId) {
+//        NSLog(@"%@", assetLocalId);
+//    } failureBlock:^(NSError *error) {
+//        NSLog(@"%@", error);
+//        if (error.domain == NSCocoaErrorDomain && error.code == 2047) {
+//            
+//        }
+//    }];
+    [[LSSaveToAlbum mainSave] saveImage:image successBlock:nil failureBlock:nil];
 }
 
 - (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
